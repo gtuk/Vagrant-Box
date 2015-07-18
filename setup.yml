@@ -3,6 +3,8 @@
   remote_user: vagrant
   sudo: yes
   tasks:
+    - name: Update apt cache
+      apt: update_cache=yes
 
     - name: Install PHP and its modules
       apt: pkg={{ item }} state=latest
